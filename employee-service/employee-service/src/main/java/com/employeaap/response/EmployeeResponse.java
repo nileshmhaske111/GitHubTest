@@ -6,17 +6,27 @@ public class EmployeeResponse {
 	private String name;
 	private String email;
 	private String age;
+	private AddressResponse addressResponse; 
 	
-	public EmployeeResponse() {
-		super();
-	}
-
-	public EmployeeResponse(int id, String name, String email, String age) {
+	public EmployeeResponse(int id, String name, String email, String age, AddressResponse addressResponse) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.age = age;
+		this.addressResponse = addressResponse;
+	}
+
+	public EmployeeResponse() {
+		super();
+	}
+
+	public AddressResponse getAddressResponse() {
+		return addressResponse;
+	}
+
+	public void setAddressResponse(AddressResponse addressResponse) {
+		this.addressResponse = addressResponse;
 	}
 
 	public int getId() {
